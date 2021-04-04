@@ -3,4 +3,4 @@ x = 5;
 print(x);
 
 print("Hallo ich bin Esra.")
-print("Ich bin Lena, Hallo")
+print("Ich versuche es nochmal :) Funktioniere")
