@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Button, Grid, Typography, withStyles } from '@material-ui/core';
+import Paper from '@material-ui/core/Paper';
 
 /** 
  * Renders a landing page for users who are not signed in. Provides a sign in button 
@@ -26,16 +27,16 @@ class SignIn extends Component {
 		const { classes } = this.props;
 
 		return (
-			<div>
-				<Typography className={classes.root} align='center' variant='h6'>Fange an zu Lernen!!!</Typography>
+			<div className={classes.paper}>
+				<Paper elevation={3}>
+				<Typography className={classes.root} align='center' variant='h5'>Fange an zu Lernen!</Typography>
 				<Typography className={classes.root} align='center'>Melde dich an :)</Typography>
-				<Typography className={classes.root} align='center'>In wenigen Klicks gehts los!!!!!!!</Typography>
+				<Typography className={classes.root} align='center'>In wenigen Klicks gehts los!</Typography>
 				<Grid container direction="column"  justify="space-between" alignItems="center" spacing={2}>
 					<Grid item>
 						<Button variant='contained' color='primary' onClick={this.handleSignInButtonClicked}>
 							Login
       			</Button>
-                  <br></br>
                 </Grid> 
                  <Grid item >
                   <Button variant='contained' color='primary' onClick={this.handleSignInButtonClicked}>
@@ -43,6 +44,7 @@ class SignIn extends Component {
       			</Button>
 					</Grid>
 				</Grid>
+				</Paper>
 			</div>
 		);
 	}
@@ -50,8 +52,15 @@ class SignIn extends Component {
 
 /** Component specific styles */
 const styles = theme => ({
+	paper:{
+		marginRight: 600,
+		marginLeft: 600,
+		marginTop: 100,
+
+	},
 	root: {
-		margin: theme.spacing(2)
+		margin: theme.spacing(3),
+		paddingTop:20,
 	}
 });
 
