@@ -13,7 +13,8 @@ import AddIcon from '@material-ui/icons/Add';
 import EditIcon from '@material-ui/icons/Edit';
 import UpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { green } from '@material-ui/core/colors';
-import Box from '@material-ui/core/Box';;
+import Box from '@material-ui/core/Box';
+import TextField from '@material-ui/core/TextField';
 
 class Gruppe extends Component {
     state = {  }
@@ -72,7 +73,7 @@ class Gruppe extends Component {
             },
           }));
           
-          export default function FloatingActionButtonZoom() {
+          function FloatingActionButtonZoom() { //export default gelöscht
             const classes = useStyles();
             const theme = useTheme();
             const [value, setValue] = React.useState(0);
