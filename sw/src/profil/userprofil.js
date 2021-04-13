@@ -14,7 +14,29 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import Select from '@material-ui/core/Select';
 
 class UserProfil extends Component {
-  state = {  }
+  constructor(props){
+  super(props)
+  this.state = { 
+    name: "",
+    vorname:"",
+    alter: "",
+    semester:"",
+    studiengang:"",
+    hobbies:"",
+    interessen:"",
+    vorlieben:"",
+    persönlichkeit:"",
+    lerntyp:"",
+    lernzeitraum:"",
+    lernort:"",
+    lernfrequenz:"",
+    vorkentnisse:"",
+    berufserfahrung:""
+   }
+  }
+  handleChange = () =>{
+    
+  }
   render() { 
     return ( 
       <div>
@@ -24,7 +46,7 @@ class UserProfil extends Component {
           <form>
             <div className="PersProfil"> 
             <h2> Persönliches Profil</h2>
-              <div className="Name"><TextField id="Name" label="Name" variant="outlined" /></div>
+              <div className="Name"><TextField id="Name" label="Name" variant="outlined" value={this.state.name} onChange={this.handleChange}/></div>
               <div className="Vorname"><TextField id="Vorname" label="Vorname" variant="outlined"/> </div>
               <div className="Alter"> <TextField id="Alter" label="Alter" variant="outlined"/> </div>
               <div className="Semester"><TextField id="Semester" label="Semester" variant="outlined" /></div>

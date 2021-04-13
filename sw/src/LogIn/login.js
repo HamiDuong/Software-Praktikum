@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Button, Grid, Typography, withStyles } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
-
+import TextField from '@material-ui/core/TextField';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link
+  } from "react-router-dom";
+  
 /** 
  * Renders a landing page for users who are not signed in. Provides a sign in button 
  * for using an existing google account to sign in. The component uses firebase to 
@@ -38,6 +45,22 @@ class SignIn extends Component {
 							Login
       			</Button>
                 </Grid> 
+				<TextField
+					required
+					id="username"
+					label="Username"
+					variant="filled"
+					/>
+					<Redirect from='/' to='login' />
+					<Route exact path='/login'>
+					</Route>
+				<TextField
+					required
+					id="passwort"
+					label="Password"
+					type="password"
+					autoComplete="current-password"
+					/>
                  <Grid item >
                   <Button variant='contained' color='primary' onClick={this.handleSignInButtonClicked}>
 							Registrieren
