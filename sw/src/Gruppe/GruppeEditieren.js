@@ -14,7 +14,7 @@ getUser = () => {
           })
         );
 
-// User löschen button 
+// User löschen button fehlt noch der befehl !
 
 
 import React, { Component } from 'react';
