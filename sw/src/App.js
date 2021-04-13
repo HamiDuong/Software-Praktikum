@@ -3,12 +3,11 @@ import './App.css';
 import "./profil/userprofil.js"
 import UserProfil from './profil/userprofil.js';
 import SignIn from "./LogIn/login.js"
-import Gruppe from "./Gruppe.js"
-
+import Gruppe from "./Gruppe/Gruppe.js"
 function App() {
   return (
     // <UserProfil></UserProfil>
-    //  <SignIn> </SignIn>
+   //<SignIn> </SignIn>//
     <Gruppe></Gruppe>
   );
 }
