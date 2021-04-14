@@ -4,11 +4,13 @@ import "./profil/userprofil.js"
 import UserProfil from './profil/userprofil.js';
 import SignIn from "./LogIn/login.js"
 import Gruppe from "./Gruppe/Gruppe.js"
+
 function App() {
   return (
     // <UserProfil></UserProfil>
    //<SignIn> </SignIn>//
-    <Gruppe></Gruppe>
+    //<Gruppe></Gruppe>
+    <Chat></Chat>
   );
 }
 
