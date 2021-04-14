@@ -34,8 +34,13 @@ class UserProfil extends Component {
     berufserfahrung:""
    }
   }
-  handleChange = () =>{
-    
+  handleChange = (e) =>{
+    this.setstate({[e.target.id]: e.target.value})
+  }
+  handleSubmit =  (e) =>{
+    e.preventDefault()
+    console.log(this.state)
+
   }
   render() { 
     return ( 
@@ -43,7 +48,7 @@ class UserProfil extends Component {
       <Container className="Überschrift">
         <h1>Erstelle dein Profil und finde deine Lerngruppe!</h1>
       </Container>
-          <form>
+          <form id="userprofil" onSubmit={this.handleSubmit}>
             <div className="PersProfil"> 
             <h2> Persönliches Profil</h2>
               <div className="Name"><TextField id="Name" label="Name" variant="outlined" value={this.state.name} onChange={this.handleChange}/></div>
@@ -129,10 +134,9 @@ class UserProfil extends Component {
             <div className="Vorkenntnisse"><TextField id="standard-basic" label="Vorkenntnisse" variant="outlined"/></div>
             <div className="Berufserfahrung"><TextField id="standard-basic" label="Berufserfahrung" variant="outlined" /></div>
           </div>
+          <div className="Anmelden"><Button variant="contained" color="primary" size="large" type="submit"> Anmelden</Button></div>
           </form>
-         <div className="Anmelden"><Button variant="contained" color="primary" size="large"> Anmelden</Button></div>
-       </div>
-   
+          </div>
       );
   }
 }

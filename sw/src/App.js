@@ -6,9 +6,9 @@ import SignIn from "./LogIn/login.js"
 import Gruppe from "./Gruppe/Gruppe.js"
 function App() {
   return (
-    // <UserProfil></UserProfil>
+    <UserProfil></UserProfil>
    //<SignIn> </SignIn>//
-    <Gruppe></Gruppe>
+    // <Gruppe></Gruppe>
   );
 }
 
