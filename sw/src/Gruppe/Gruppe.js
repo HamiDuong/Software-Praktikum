@@ -146,7 +146,7 @@ class Gruppe extends Component {
                      }}
                       /></form>
                   </TabPanel>
-                </SwipeableViews>
+                
                 {fabs.map((fab, index) => (
                   <Zoom
                     key={fab.color}

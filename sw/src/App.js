@@ -9,8 +9,8 @@ function App() {
   return (
     // <UserProfil></UserProfil>
    //<SignIn> </SignIn>//
-    //<Gruppe></Gruppe>
-    <Chat></Chat>
+    <Gruppe></Gruppe>
+    //<Chat></Chat>
   );
 }
 
